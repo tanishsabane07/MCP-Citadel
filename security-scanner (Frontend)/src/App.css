@@ -1,0 +1,217 @@
+/* General layout */
+body, html, #root {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+  }
+  
+  .app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Card style */
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+  
+  /* Input */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #aaa;
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #0072ff, #00c6ff);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  }
+  
+  /* Result Section */
+  .result-card p {
+    margin: 8px 0;
+  }
+  
+  /* Dataset list */
+  .dataset-list {
+    margin-top: 10px;
+  }
+  
+  .dataset-card {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .dataset-title {
+    font-weight: bold;
+    color: #00c6ff;
+  }
+  
+  /* History Table */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  th {
+    background: rgba(255,255,255,0.1);
+    color: #00c6ff;
+  }
+  
+  tr:hover {
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .app-header {
+      font-size: 2rem;
+    }
+  }
+  
+
+  /* Spinner container inside button */
+.spinner-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between spinner and text */
+  }
+  
+  /* Spinner circle */
+  .spinner {
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.3); /* light border */
+    border-top: 3px solid #00c6ff; /* highlighted color for rotation */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Optional: smaller Analyze button width on mobile */
+  @media (max-width: 768px) {
+    .analyze-button {
+      width: 100%;
+    }
+  }
+
+  
+  /* Container scroll for small screens */
+.table-container {
+    overflow-x: auto;
+    margin-top: 10px;
+  }
+  
+  /* Datasets table */
+  .datasets-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .datasets-table th,
+  .datasets-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .datasets-table th {
+    background: rgba(255,255,255,0.1);
+    color: #00c6ff;
+    font-weight: bold;
+  }
+  
+  .datasets-table tr:hover {
+    background: rgba(255,255,255,0.08);
+  }
+  
+  /* Responsive: scroll horizontally on small screens */
+  @media (max-width: 768px) {
+    .datasets-table th,
+    .datasets-table td {
+      padding: 8px 10px;
+    }
+  }
+
+  .severity-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  
+  .severity-bar-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+  }
+  
